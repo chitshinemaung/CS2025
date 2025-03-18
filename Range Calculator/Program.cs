@@ -22,11 +22,11 @@ namespace Range_Calculator
             //Console.WriteLine("Enter any number: ");
             //userInput = int.Parse(Console.ReadLine());
 
-            r1 = userinput > 0 && userinput <= 50 ? 50 : 0;
+            r1 = userinput - 50;
             Console.WriteLine("This is the result R1: " + r1);
-            r2 = userinput > 50 && userinput <= 75 ? 25 : 0;
+            r2 = r1 - 25;
             Console.WriteLine("This is the result R2: " + r2);
-            r3 = userinput > 75 && userinput <= 150 ? 75 : 0;
+            r3 = r2;
             Console.WriteLine("This is the result R3: " + r3);
             r4 = userinput > 150 && userinput <= 200 ? 50 : 0;
             Console.WriteLine("This is the result R4: " + r4);
