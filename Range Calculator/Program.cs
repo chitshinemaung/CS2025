@@ -33,6 +33,9 @@ namespace Range_Calculator
             r5 = userinput > 200 ? 0 : 0;
             Console.WriteLine("This is the result R5: " + r5);
 
+
+            int result = r1 + r2 + r3 + r4 + r5;
+            Console.WriteLine("This is the final result: " + result);
         }
     }
 }
