@@ -36,6 +36,8 @@ namespace Range_Calculator
 
             int result = r1 + r2 + r3 + r4 + r5;
             Console.WriteLine("This is the final result: " + result);
+
+
         }
     }
 }
