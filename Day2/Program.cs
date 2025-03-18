@@ -10,6 +10,7 @@ namespace Day2
     {
         static void Main(string [] args)
         {
+            Console.ForegroundColor = ConsoleColor.Green;
             int mark = 85;
 
             string result = mark > 39 ? mark > 79 ? "Distinction" : "Pass" : "Fail";

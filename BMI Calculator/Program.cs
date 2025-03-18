@@ -15,8 +15,10 @@ namespace BMI_Calculator
             double height;
             double bmi;
 
-            Console.WriteLine("Enter your Weight(lb) and Hight (inches) :");
+            Console.ForegroundColor = ConsoleColor.Red;
+            Console.WriteLine("\bEnter your Weight(lb) and Hight (inches) :");
             Console.WriteLine();
+            Console.ForegroundColor = ConsoleColor.Green;
             Console.WriteLine("Enter your weight: ");
             weight = Convert.ToDouble(Console.ReadLine());
 
