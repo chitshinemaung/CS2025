@@ -23,16 +23,16 @@ namespace BMI_Calculator
             Console.WriteLine("Enter your height: ");
             height = Convert.ToDouble(Console.ReadLine());
 
-            bmi = (weight* 703) /  (height * height);  // BMI = weight * height
+            bmi = ( weight * 703 ) / ( height * height );  // BMI = weight * height
             Console.WriteLine("Your BMI is: " + bmi);
 
-            if ( bmi < 18.5)
+            if ( bmi < 18.5 )
             {
                 Console.WriteLine("You are underweight");
             }
             else
             {
-                if ( bmi > 18.5 && bmi < 24.9)
+                if ( bmi > 18.5 && bmi < 24.9 )
                 {
                     Console.WriteLine("You are normal weight");
                 }
@@ -42,10 +42,13 @@ namespace BMI_Calculator
                     {
                         Console.WriteLine("You are overweight");
                     }
-                    
+
                 }
-            
+
+            }
         }
     }
 }
+    
+
  
