@@ -16,28 +16,95 @@ namespace Range_Calculator
             201 >
         */
         {
-            int r1, r2, r3, r4, r5, userinput;
-            userinput = 100;
-            //int userInput;
-            //Console.WriteLine("Enter any number: ");
-            //userInput = int.Parse(Console.ReadLine());
 
-            r1 = userinput - 50;
-            Console.WriteLine("This is the result R1: " + r1);
-            r2 = r1 - 25;
-            Console.WriteLine("This is the result R2: " + r2);
-            r3 = r2;
-            Console.WriteLine("This is the result R3: " + r3);
-            r4 = userinput > 150 && userinput <= 200 ? 50 : 0;
-            Console.WriteLine("This is the result R4: " + r4);
-            r5 = userinput > 200 ? 0 : 0;
-            Console.WriteLine("This is the result R5: " + r5);
+            Console.WriteLine("Enter the number: ");
+            int number = Convert.ToInt32(Console.ReadLine());
+            int range = 0;
 
+            if ( number >= 1 && number <= 50 )
+            {
+                if ( number == 50 )
+                {
+                    range = 50;
+                }
+                else
+                {
+                    range = number;
+                }
 
-            int result = r1 + r2 + r3 + r4 + r5;
-            Console.WriteLine("This is the final result: " + result);
+                Console.WriteLine("1 - 50 ==> " + range);
+                Console.WriteLine("51 - 75 ==> 0");
+                Console.WriteLine("76 - 150 ==> 0");
+                Console.WriteLine("151 - 200 ==> 0");
+                Console.WriteLine("201 ==> 0");
 
+            }
+            if ( number >= 51 && number <= 75 )
+            {
+                if ( number == 75 )
+                {
+                    range = 25;
+                }
+                else
+                {
+                    range = number - 50;
+                }
+                Console.WriteLine("1 - 50 ==> 50");
+                Console.WriteLine("51 - 75 ==> " + range);
+                Console.WriteLine("76 - 150 ==> 0");
+                Console.WriteLine("151 - 200 ==> 0");
+                Console.WriteLine("201 ==> 0");
 
+            }
+
+            if ( number >= 76 && number <= 150 )
+            {
+                if ( number == 150 )
+                {
+                    range = 75;
+                }
+                else
+                {
+                    range = number - 75;
+                }
+
+                Console.WriteLine("1 - 50 ==> 50");
+                Console.WriteLine("51 - 75 ==> 25");
+                Console.WriteLine("76 - 150 ==> " + range);
+                Console.WriteLine("151 - 200 ==> 0");
+                Console.WriteLine("201 ==> 0");
+            }
+
+            if ( number >= 151 && number <= 200 )
+            {
+                if (number == 200 )
+                {
+                    range = 50;
+                }
+                else
+                {
+                    range = number - 150;
+                }
+                Console.WriteLine("1 - 50 ==> 50");
+                Console.WriteLine("51 - 75 ==> 25");
+                Console.WriteLine("76 - 150 ==> 75");
+                Console.WriteLine("151 - 200 ==> " + range );
+                Console.WriteLine("201 ==> 0");
+            }
+            if ( number >= 201 )
+            {
+                range = number - 200;
+                Console.WriteLine("1 - 50 ==> 50");
+                Console.WriteLine("51 - 75 ==> 25");
+                Console.WriteLine("76 - 150 ==> 75");
+                Console.WriteLine("151 - 200 ==> 50");
+                Console.WriteLine("201 ==> " + range);
+            }
+            if ( number <= 202)
+            {
+                range = number;
+                Console.WriteLine(range);
+            }
         }
     }
 }
