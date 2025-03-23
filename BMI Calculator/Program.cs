@@ -25,7 +25,7 @@ namespace BMI_Calculator
             Console.WriteLine("Enter your height: ");
             height = Convert.ToDouble(Console.ReadLine());
 
-            bmi = ( weight * 703 ) / ( height * height );  // BMI = weight * height
+            bmi = ( weight * 703 ) / ( height * height );  // BMI 
             Console.WriteLine("Your BMI is: " + bmi);
 
             if ( bmi < 18.5 )
