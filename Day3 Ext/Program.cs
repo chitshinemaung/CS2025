@@ -46,3 +46,35 @@ else
 {
     Console.WriteLine("Not Vowel");
 }
+
+int [] arr = new int [5];
+int ind = 2;
+arr [0] = 1;
+arr [2-1] = 2;
+arr [ind] = 3;
+arr [ind * 2] = 4;
+
+//Console.WriteLine(arr [0]);
+//Console.WriteLine(arr [1]);
+//Console.WriteLine(arr [2]);
+//Console.WriteLine(arr [3]);
+//Console.WriteLine(arr [4]);
+
+int start = 0;
+int end = 5;
+
+CSM:  if (start < 5 ) // start < arr.Length
+{
+    Console.WriteLine($"IF: Answer is {start}");
+    start++;
+    goto CSM;
+}
+
+int co = arr.Length;
+for (int i = 0; i < co; i++ )
+{
+    Console.WriteLine($"FOR: Answer is {arr [i]}");
+}
+
+
+
