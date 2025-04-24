@@ -36,7 +36,21 @@ namespace Day_4
             foreach (var item in Arr)
             {
                 Console.WriteLine(item);
+
             }
+
+
+            Queue Q1 = new Queue();
+            Q1.Enqueue(DateTime.Now);
+            Q1.Enqueue(111);
+
+            Console.WriteLine(Q1.Peek());
+
+            Stack S1 = new Stack();
+            S1.Push(222);
+            S1.Push("Stack");
+
+            Console.WriteLine(S1.Peek());
 
 
 
