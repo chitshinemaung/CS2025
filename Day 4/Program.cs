@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -57,24 +58,49 @@ namespace Day_4
     //    }
 
     //}
-    
 
 
 
-class APPConstant
+
+    //class APPConstant
+    //{
+    //    public const string APPName = "Myapp";
+    //    public const string APPColor = "Red";
+
+    //    public static void Main(string[] args)
+    //    {
+    //        string Vv1 = APPConstant.APPName;
+    //        Console.WriteLine(Vv1); // This will not work because V1 is not a constant expression
+
+    //        string Vv2 = APPConstant.APPColor;
+    //        Console.WriteLine(Vv2); // This will work because V2 is a constant expression
+    //    }
+
+
+    //}
+
+
+    class program2
     {
-        public const string APPName = "Myapp";
-        public const string APPColor = "Red";
-
-        public static void Main(string[] args)
+        public static void Main(string [] args)
         {
-            string Vv1 = APPConstant.APPName;
-            Console.WriteLine(Vv1); // This will not work because V1 is not a constant expression
-
-            string Vv2 = APPConstant.APPColor;
-            Console.WriteLine(Vv2); // This will work because V2 is a constant expression
+            AddTwoNumber(100, 200);
+            int ans = AddTwoNumber1(300, 200);
+            Console.WriteLine(ans);
+        }
+        public static void AddTwoNumber(int x, int y)
+        {
+            int sum = x + y;
+            Console.WriteLine(sum);
         }
 
+        public static int AddTwoNumber1(int x, int y)
+        {
+            return x + y;
+            
+        }
+       
 
     }
+
 }
