@@ -84,7 +84,8 @@ namespace Day_4
     {
         public static void Main(string [] args)
         {
-            AddTwoNumber(100, 200);
+            AddTwoNumber(y:100, x:200);
+
             int ans = AddTwoNumber1(300, 200);
             Console.WriteLine(ans);
         }
@@ -99,7 +100,13 @@ namespace Day_4
             return x + y;
             
         }
-       
+
+        public void AddTwoNumber3(int x, int y)
+        {
+            int ans1 = x + y + 1;
+            Console.WriteLine(ans1);
+        }
+
 
     }
 
