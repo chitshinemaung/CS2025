@@ -19,6 +19,18 @@ namespace Day_5
             call2(sb);
             Console.WriteLine(sb.ToString());
 
+            int j = 9;
+            int j1 = 10;
+            call3(ref j, ref j1);
+            Console.WriteLine(j + j1);
+
+        }
+
+        static void call3(ref int z, ref int z1)
+        {
+            z = z + 1;
+            z1 = z1 + 1;
+            Console.WriteLine(z + ", "+ z1);
         }
 
         static void call2 (StringBuilder s )
