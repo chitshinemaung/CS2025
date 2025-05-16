@@ -2,6 +2,7 @@
 using System;
 using System.Collections;
 using System.Data.SqlTypes;
+using System.IO.Pipes;
 using System.Text;
 using System.Xml.Serialization;
 namespace Testing
@@ -35,8 +36,58 @@ namespace Testing
             Program PG = new Program();
             PG.Dosquare();
 
+            //Extension Method
+            string name = "Chit Shine Maung".Pll().AllUpper();
+            Console.WriteLine(name);
+
+            //Method Overloading
+            Adation(10, 20);
+
+            //Constructor
+            Person p = new Person();
 
 
+
+        }
+        //Constructor
+        class Person
+         {
+            //default constructor
+            public Person()
+            {
+
+            }
+
+            //parameterized constructor
+            public Person(string name , string email)
+            {
+
+            }
+
+            public Person(string Address)
+            {
+
+            }
+
+         }
+
+        //Method Overloading
+        public static void Adation(int x, int y)
+        {
+            int z = x + y;
+            Console.WriteLine("Int vlaue " + z);
+        }
+
+        public static void Adation(double x, double y)
+        {
+            double z = x + y;
+            Console.WriteLine("Short vlaue " + z);
+        }
+
+        public static void Adation(string x, string y)
+        {
+            string z = x + y;
+            Console.WriteLine("Long vlaue " + z);
         }
 
         //pass by value
@@ -90,6 +141,19 @@ namespace Testing
             {
                 return x = x * x;
             }
+        }
+    }
+
+    public static class streamExtension
+    {
+        public static string Pll (this string PP)
+        {
+            return PP + "S";
+        }
+
+        public static string AllUpper(this string PP)
+        {
+            return PP.ToUpper();
         }
     }
 
