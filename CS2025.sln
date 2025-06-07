@@ -25,6 +25,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Day 7", "Day 7\Day 7.csproj
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Testing Area", "Testing Area\Testing Area.csproj", "{736813A9-2F0B-4997-BF09-A79EAD679A91}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Day6", "Day6\Day6.csproj", "{9020CE2E-0D7C-4749-9970-867046CD2D68}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Day13", "..\Day13\Day13.csproj", "{D16D770C-35BA-4044-B759-D6B78154DA66}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Day18", "Day18\Day18.csproj", "{9C7A716D-23E5-43CF-89D9-C315F2FDEE98}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -75,8 +81,23 @@ Global
 		{736813A9-2F0B-4997-BF09-A79EAD679A91}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{736813A9-2F0B-4997-BF09-A79EAD679A91}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{736813A9-2F0B-4997-BF09-A79EAD679A91}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9020CE2E-0D7C-4749-9970-867046CD2D68}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9020CE2E-0D7C-4749-9970-867046CD2D68}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9020CE2E-0D7C-4749-9970-867046CD2D68}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9020CE2E-0D7C-4749-9970-867046CD2D68}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D16D770C-35BA-4044-B759-D6B78154DA66}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D16D770C-35BA-4044-B759-D6B78154DA66}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D16D770C-35BA-4044-B759-D6B78154DA66}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D16D770C-35BA-4044-B759-D6B78154DA66}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9C7A716D-23E5-43CF-89D9-C315F2FDEE98}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9C7A716D-23E5-43CF-89D9-C315F2FDEE98}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9C7A716D-23E5-43CF-89D9-C315F2FDEE98}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9C7A716D-23E5-43CF-89D9-C315F2FDEE98}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {77A308C6-7A4D-4327-A818-A8179030115E}
 	EndGlobalSection
 EndGlobal

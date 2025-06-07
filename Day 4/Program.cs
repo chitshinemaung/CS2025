@@ -88,6 +88,10 @@ namespace Day_4
 
             int ans = AddTwoNumber1(300, 200);
             Console.WriteLine(ans);
+
+            program2 obj = new program2();
+            obj.AddTwoNumber3(100, 200);
+           
         }
         public static void AddTwoNumber(int x, int y)
         {
