@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
@@ -37,6 +38,20 @@ namespace Day18
             //string ress4 = Encoding.UTF8.GetString(WDPED(res3));
             //Console.WriteLine(ress4);
 
+
+
+            // string plainText = "AES_Encrypt"
+
+            var res5 = AES_Encrypt("Hello World"); // AES Encription
+            Console.WriteLine(res5);
+
+            Console.WriteLine();
+
+            var res6 = AES_Decrypt(res5); // AES Decription
+            Console.WriteLine(res6); // Hello World 
+
+
+
         }
 
 
@@ -65,9 +80,73 @@ namespace Day18
         //{
         //    var salt = new byte [] { 0x1, 0x2, 0x3, 0x4, 0x5, 0x6, 0x7, 0x8 };
         //    return ProtectedData.Unprotect(pt1byte, salt, DataProtectionScope.CurrentUser);
-        //}
+
+        static string AES_Encrypt(string PlainText)
+        {
+            string encKey = "Myanmar";
+
+            byte [] plainByte = Encoding.UTF8.GetBytes(PlainText);
+
+            using ( Aes enc = Aes.Create() )
+            {
+                var salt = new byte [] { 0x1, 0x2, 0x3, 0x4, 0x5, 0x6, 0x7, 0x8 };
+
+                Rfc2898DeriveBytes rdb = new Rfc2898DeriveBytes(encKey, salt);
+
+                enc.Key = rdb.GetBytes(32); // 256 bit key
+                enc.IV = rdb.GetBytes(16); // 128 bit IV
 
 
+                using ( MemoryStream ms = new MemoryStream() )
+                {
+                    using ( CryptoStream cs = new CryptoStream(ms, enc.CreateEncryptor(), CryptoStreamMode.Write) )
+                    {
+                        cs.Write(plainByte, 0, plainByte.Length);
+                        cs.Close();
+                    }
+
+                    PlainText = Convert.ToBase64String(ms.ToArray());
+                }
+            }
+
+            return PlainText;
+
+
+        }
+
+        static string AES_Decrypt(string PlainText)
+        {
+            string encKey = "Myanmar";
+            PlainText = PlainText.Replace(" ", "+"); // Handle spaces in base64 string
+
+            byte [] plainByte = Convert.FromBase64String(PlainText);
+
+            using ( Aes enc = Aes.Create() )
+            {
+                var salt = new byte [] { 0x1, 0x2, 0x3, 0x4, 0x5, 0x6, 0x7, 0x8 };
+
+                Rfc2898DeriveBytes rdb = new Rfc2898DeriveBytes(encKey, salt);
+
+                enc.Key = rdb.GetBytes(32); // 256 bit key
+                enc.IV = rdb.GetBytes(16); // 128 bit IV
+
+
+                using ( MemoryStream ms = new MemoryStream() )
+                {
+                    using ( CryptoStream cs = new CryptoStream(ms, enc.CreateDecryptor(), CryptoStreamMode.Write) )
+                    {
+                        cs.Write(plainByte, 0, plainByte.Length);
+                        cs.Close();
+                    }
+
+                    PlainText = Encoding.UTF8.GetString(ms.ToArray());
+                }
+            }
+
+            return PlainText;
+
+
+        }
 
     }
 }
